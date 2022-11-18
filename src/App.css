@@ -1,38 +1,172 @@
-.App {
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(16, 87, 145);
+  height: 50px;
+  color: white;
+  width: 100%;
+}
+
+button {
+  width: 98px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.add-button {
+  border: none;
+  background-color: #bababa;
+  margin: 30px;
+  width: 200px;
+}
+
+.login-button {
+  background-color: #ffff;
+  color: black;
+  border: none;
+  margin: 0 auto;
+  display: block;
+}
+
+.logout-button {
+  margin: 8px;
+  background-color: #d9d9d9;
+  color: black;
+  float: right;
+  border: none;
+}
+
+.lil-button {
+  width: 20px;
+  height: 20px;
+  background-color: #ffff;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.lil-button:hover {
+  background-color: rgb(16, 87, 145);
+}
+
+.login {
+  position: flex;
+  width: 35%;
+  height: 35%;
+  left: 49px;
+  top: 171px;
+  background-color: #d9d9d9;
+  padding: 10px;
+  margin: auto;
+}
+
+input {
+  height: 34px;
+  margin: 30px;
+  border: none;
+  width: 50%;
+}
+
+.pop-up {
+  width: 50;
+  height: 35%;
+  background-color: #bababa;
+  border: 1px solid black;
+  position: absolute;
+  top: 30%;
+  left: 30%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pop-up-head {
+  justify-self: center;
+  text-align: center;
+  margin: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pop-up-button {
+  display: inline-block;
+  margin: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.name {
+  float: right;
+  margin: 16px;
+  color: black;
+}
+
+.orders {
+  margin: 16px;
+  float: left;
   color: white;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.new-orders {
+  margin: 16px;
+  color: white;
+  float: left;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter {
+  cursor: pointer;
+}
+
+.filter:hover {
+  background-color: gray;
+}
+
+table {
+  margin: auto;
+  margin-top: 50px;
+  width: 800px;
+  border-collapse: collapse;
+  text-align: center;
+}
+table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #d9d9d9;
+  border: 1px solid black;
+}
+table td {
+  border: 1px solid black;
+  padding: 5px;
+  background: #d9d9d9;
+}
+.table-button {
+  border: none;
+  background-color: #f5f5f5;
+  display: flex;
+  text-align: center;
+}
+
+.done {
+  color: #bababa;
+}
+
+.n-order {
+  background-color: #f5f5f5;
+  position: flex;
+  width: 40%;
+  height: 40%;
+  margin: auto;
+  background-color: #d9d9d9;
+  padding: 50px;
+}
+
+.text-add {
+  margin: 30px;
+  font-size: 18px;
 }

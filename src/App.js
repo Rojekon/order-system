@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Login from "./components/Login";
+import NewOrder from "./components/NewOrder";
+import OrderData from "./components/OrderData";
+import Notfound from "./components/Notfound";
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {currentUser === null && (
+        <Login
+          onChangeLogin={(currentUser) => {
+            setCurrentUser(currentUser);
+          }}
+        />
+      )}
+      {currentUser !== null && (
+        <Routes>
+          <Route path="/" element={<Navbar currentUser={currentUser} />}>
+            <Route
+              index
+              path="/"
+              element={<OrderData currentUser={currentUser} />}
+            />
+            <Route
+              path="neworder"
+              element={<NewOrder currentUser={currentUser} />}
+            />
+            <Route path="*" element={<Notfound />} />
+          </Route>
+        </Routes>
+      )}
     </div>
   );
 }
